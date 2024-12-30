@@ -1,0 +1,1 @@
+docker.io/kubesphere/whizard-telemetry-apiserver:v1.2.2

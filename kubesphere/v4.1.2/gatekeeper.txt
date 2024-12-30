@@ -1,0 +1,4 @@
+docker.io/kubesphere/gatekeeper-extension-apiserver:v1.0.1
+docker.io/kubesphere/kubectl:v1.27.12
+docker.io/openpolicyagent/gatekeeper:v3.14.0
+docker.io/openpolicyagent/gatekeeper-crds:v3.14.0

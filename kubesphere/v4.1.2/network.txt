@@ -1,0 +1,2 @@
+docker.io/kubesphere/network-extension-apiserver:v1.1.0
+docker.io/kubesphere/network-extension-controller:v1.1.0

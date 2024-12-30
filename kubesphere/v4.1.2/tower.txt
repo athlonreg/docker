@@ -1,0 +1,2 @@
+docker.io/kubesphere/tower:v0.2.1
+docker.io/kubesphere/tower-extension:v1.0.0

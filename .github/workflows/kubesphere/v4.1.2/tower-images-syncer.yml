@@ -1,0 +1,23 @@
+name: KubeSphere V4.1.2 tower Images Syncer
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup skopeo
+      run: sudo apt-get update && sudo apt-get -y install skopeo
+    - name: Copy images
+      run: bash skopeo.sh
+      env: 
+        IMAGES_LIST_FILE: kubesphere/v4.1.2/tower.txt
+        REGISTRY: swr.cn-east-5.myhuaweicloud.com
+        REPOSITORY: tsiongchi
+        USERNAME: ${{ vars.HUAWEI_USERNAME }}
+        TOKEN: ${{ secrets.HUAWEI_TOKEN }}

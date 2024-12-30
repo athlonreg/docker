@@ -1,0 +1,6 @@
+docker.io/kubesphere/kubectl:v1.27.12
+docker.io/kubesphere/log-sidecar-injector:v1.3.0
+docker.io/jimmidyson/configmap-reload:v0.9.0
+docker.io/elastic/filebeat:6.7.0
+docker.io/timberio/vector:0.39.0-debian
+docker.io/library/alpine:3.14
