@@ -1,4 +1,4 @@
-name: KubeSphere V4.1.2 grafana Images Syncer
+name: KubeSphere V4.1.2 ks-core Images Syncer
 
 on:
   workflow_dispatch:
@@ -16,8 +16,7 @@ jobs:
     - name: Copy images
       run: bash skopeo.sh
       env: 
-        IMAGES_LIST_FILE: kubesphere/v4.1.2/grafana.txt
+        IMAGES_LIST_FILE: kubesphere/v4.1.2/ks-core.txt
         REGISTRY: swr.cn-east-5.myhuaweicloud.com
         REPOSITORY: tsiongchi
-        USERNAME: ${{ vars.HUAWEI_USERNAME }}
         TOKEN: ${{ secrets.HUAWEI_TOKEN }}

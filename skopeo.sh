@@ -11,7 +11,7 @@ do
 	DEST=docker://$REGISTRY/$REPOSITORY/$IMAGE_NAME:$IMAGE_TAG
 	echo
 	sleep 2
-	if skopeo copy --dest-creds $TOKEN ${SRC} ${DEST}
+	if skopeo copy --dest-creds $TOKEN --multi-arch all ${SRC} ${DEST}
 	then
 	  echo "Process: sync $SRC to $DEST successfully"
 	else
