@@ -40,7 +40,6 @@ docker.io/library/postgres:17
 docker.io/library/postgres:17-alpine
 docker.io/library/postgres:17-bookworm
 docker.io/library/mongo:7
-docker.io/library/mongo:7-alpine
 docker.io/library/mongo:7-jammy
 docker.io/library/mariadb:11
 docker.io/library/mariadb:11.2-jammy
