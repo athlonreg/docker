@@ -90,7 +90,6 @@ docker.io/library/eclipse-mosquitto:2
 docker.io/redis/redis-stack:latest
 docker.io/apache/kafka:latest
 ## Monitoring & Observability
-docker.io/grafana/grafana:11
 docker.io/grafana/grafana:main
 docker.io/grafana/loki:main
 docker.io/library/kibana:7.17.26
