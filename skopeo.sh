@@ -2,9 +2,9 @@
 
 set -ex
 
-TOKEN=${HUAWEI_USERNAME}:${HUAWEI_TOKEN} ${REGISTRY}
+TOKEN=${HUAWEI_USERNAME}:${HUAWEI_TOKEN}
 
-skopeo login -u ${HUAWEI_USERNAME} -p ${HUAWEI_TOKEN} 
+skopeo login -u ${HUAWEI_USERNAME} -p ${HUAWEI_TOKEN} ${REGISTRY}
 
 for IMAGE in $(cat ${IMAGES_LIST_FILE} | sed '/^#/d')
 do
