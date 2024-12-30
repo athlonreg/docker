@@ -2,6 +2,8 @@
 
 set -ex
 
+TOKEN=${TOKEN:-${HUAWEI_TOKEN}}
+
 for IMAGE in $(cat ${IMAGES_LIST_FILE} | sed '/^#/d')
 do
 	echo "syncing $IMAGE..."
@@ -11,7 +13,7 @@ do
 	DEST=docker://$REGISTRY/$REPOSITORY/$IMAGE_NAME:$IMAGE_TAG
 	echo
 	sleep 2
-	if skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false --dest-creds $TOKEN --multi-arch all --override-os linux ${SRC} ${DEST}
+	if skopeo copy --dest-creds $TOKEN ${SRC} ${DEST}
 	then
 	  echo "Process: sync $SRC to $DEST successfully"
 	else
