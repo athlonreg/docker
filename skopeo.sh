@@ -2,9 +2,9 @@
 
 set -ex
 
-TOKEN=${HUAWEI_USERNAME}:${HUAWEI_TOKEN}
+TOKEN=${HUAWEI_USERNAME}:${HUAWEI_TOKEN} ${REGISTRY}
 
-skopeo login -u ${HUAWEI_USERNAME} -p ${HUAWEI_TOKEN}
+skopeo login -u ${HUAWEI_USERNAME} -p ${HUAWEI_TOKEN} 
 
 for IMAGE in $(cat ${IMAGES_LIST_FILE} | sed '/^#/d')
 do
@@ -15,7 +15,7 @@ do
 	DEST=docker://$REGISTRY/$REPOSITORY/$IMAGE_NAME:$IMAGE_TAG
 	echo
 	sleep 2
-	if skopeo copy ${SRC} ${DEST}
+	if skopeo copy --dest-creds $TOKEN ${SRC} ${DEST}
 	then
 	  echo "Process: sync $SRC to $DEST successfully"
 	else
