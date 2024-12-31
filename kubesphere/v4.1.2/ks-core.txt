@@ -1,7 +1,0 @@
-docker.io/kubesphere/ks-apiserver:v4.1.2
-docker.io/kubesphere/ks-console:v4.1.2
-docker.io/kubesphere/ks-controller-manager:v4.1.2
-docker.io/kubesphere/kubectl:v1.27.16
-docker.io/kubesphere/redis:7.2.4-alpine
-docker.io/kubesphere/haproxy:2.9.6-alpine
-docker.io/kubesphere/ks-extensions-museum:v1.1.2

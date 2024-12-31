@@ -1,4 +1,0 @@
-docker.io/kubesphere/nginx-ingress-controller:v1.4.0
-docker.io/kubesphere/gateway-apiserver:v1.0.2
-docker.io/kubesphere/gateway-controller-manager:v1.0.2
-docker.io/kubesphere/kubectl:v1.27.16

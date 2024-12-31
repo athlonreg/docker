@@ -1,3 +1,0 @@
-docker.io/timberio/vector:0.39.0-debian
-docker.io/kubesphere/kubectl:v1.27.12
-docker.io/kubesphere/vector-config:v0.2.1

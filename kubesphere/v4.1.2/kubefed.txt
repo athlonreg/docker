@@ -1,3 +1,0 @@
-docker.io/kubesphere/kubefed-extension:v1.0.0
-docker.io/kubesphere/kubefed:v0.8.1
-docker.io/kubesphere/kubectl:v1.27.4

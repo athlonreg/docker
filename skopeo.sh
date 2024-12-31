@@ -5,7 +5,6 @@ CR_LIST=(
 	szdk.geovisearth.com/library/
 	quay.io/taolu/
 	ghcr.io/athlonreg/
-	docker.io/canvas1996/
 	registry.cn-hangzhou.aliyuncs.com/tlhub/
 )
 
@@ -13,7 +12,7 @@ skopeo login -u $(echo ${HUAWEI_TOKEN} | awk -F ':' '{print $1}') -p $(echo ${HU
 skopeo login -u $(echo ${ALIYUN_TOKEN} | awk -F ':' '{print $1}') -p $(echo ${ALIYUN_TOKEN} | awk -F ':' '{print $2}') registry.cn-hangzhou.aliyuncs.com
 skopeo login -u $(echo ${QUAYIO_TOKEN} | awk -F ':' '{print $1}') -p $(echo ${QUAYIO_TOKEN} | awk -F ':' '{print $2}') quay.io
 skopeo login -u $(echo ${GHCR_TOKEN} | awk -F ':' '{print $1}') -p $(echo ${GHCR_TOKEN} | awk -F ':' '{print $2}') ghcr.io
-skopeo login -u $(echo ${DOCKER_TOKEN} | awk -F ':' '{print $1}') -p $(echo ${DOCKER_TOKEN} | awk -F ':' '{print $2}') docker.io
+#skopeo login -u $(echo ${DOCKER_TOKEN} | awk -F ':' '{print $1}') -p $(echo ${DOCKER_TOKEN} | awk -F ':' '{print $2}') docker.io
 skopeo login -u $(echo ${EARTH_TOKEN} | awk -F ':' '{print $1}') -p $(echo ${EARTH_TOKEN} | awk -F ':' '{print $2}') szdk.geovisearth.com
 
 for CR in ${CR_LIST[*]}
