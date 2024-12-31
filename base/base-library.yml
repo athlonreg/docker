@@ -1,0 +1,138 @@
+docker.io:
+  tls-verify: false
+  images:
+    # Web Server
+    nginx:
+      - stable-alpine
+    httpd:
+      - 2-alpine
+    openresty/openresty:
+      - alpine
+    haproxy:
+      - lts-alpine
+    caddy:
+      - 2-alpine
+    # Developer Tools
+    docker:
+      - 27
+      - 27-dind-rootless
+    bash:
+      - 5
+    buildpack-deps:
+      - jammy
+      - stable
+    # Operating Systems
+    busybox:
+      - stable
+      - glibc
+      - musl
+    alpine:
+      - 3
+      - latest
+    ubuntu:
+      - focal
+      - jammy
+      - oracular
+    debian:
+      - stable
+      - bullseye
+      - bullseye-slim
+    rockylinux:
+      - 9
+      - 9-minimal
+    # Databases
+    mysql:
+      - 8.0
+      - 8.0-oraclelinux8
+      - lts
+    memcached:
+      - alpine
+      - bookworm
+    redis:
+      - 7
+      - 7-alpine
+    postgres:
+      - 17
+      - 17-alpine
+      - 17-bookworm
+    mongo:
+      - 7
+      - 7-jammy
+    mariadb:
+      - 11
+      - 11.2-jammy
+      - lts
+    influxdb:
+      - 2
+      - 2-alpine
+    elasticsearch:
+      - 7.17.26
+      - 8.17.0
+    zookeeper:
+      - 3.9
+    neo4j:
+      - 5
+      - 5-bullseye
+    # Languages & Frameworks
+    python:
+      - 3
+      - 3-alpine
+      - 3-slim
+    node:
+      - 12-alpine
+      - 12-slim
+      - 14-alpine
+      - 14-slim
+      - 16-alpine
+      - 16-slim
+      - 18-alpine
+      - 18-slim
+      - 20-alpine
+      - 20-slim
+    golang:
+      - 1-alpine
+      - 1-bookworm
+    php:
+      - 8
+      - 8-alpine
+      - 8-fpm
+      - 8-apache
+    maven:
+      - 3-eclipse-temurin-8
+      - 3-eclipse-temurin-11
+    eclipse-temurin:
+      - 8-jdk-jammy
+      - 8-jre-jammy
+      - 8-alpine-jdk
+      - 8-alpine-jre
+    gcc:
+      - 14
+    # Data Science
+    flink:
+      - java8
+    spark:
+      - 3.5.4
+    # Message Queues
+    emqx:
+      - 5
+    rabbitmq:
+      - 4
+      - 4-alpine
+      - 4-management
+    eclipse-mosquitto:
+      - 2
+    redis-stack:
+      - latest
+    kafka:
+      - latest
+    # Monitoring & Observability
+    grafana:
+      - main
+    loki:
+      - main
+    kibana:
+      - 7.17.26
+      - 8.17.0
+    logstash:
+      - 7.17.26
+      - 8.17.0

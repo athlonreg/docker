@@ -6,39 +6,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-      IMAGES_LIST_FILE: base/base-library.txt
     steps:
     - uses: actions/checkout@v4
     - name: Setup skopeo
       run: sudo apt-get update && sudo apt-get -y install skopeo
-    - name: Copy images To TCR
+    - name: Sync images
       run: bash skopeo.sh
       env: 
-        REGISTRY: swr.cn-east-5.myhuaweicloud.com
-        REPOSITORY: tsiongchi
-        TOKEN: ${{ secrets.HUAWEI_TOKEN }}
-    - name: Copy images To GHCR
-      run: bash skopeo.sh
-      env: 
-        REGISTRY: ghcr.io
-        REPOSITORY: athlonreg
-        TOKEN: ${{ secrets.GHCR_TOKEN }}
-    - name: Copy images To Quay
-      run: bash skopeo.sh
-      env: 
-        REGISTRY: quay.io
-        REPOSITORY: taolu
-        TOKEN: ${{ secrets.QUAYIO_TOKEN }}
-    - name: Copy images To Aliyun
-      run: bash skopeo.sh
-      env: 
-        REGISTRY: registry.cn-hangzhou.aliyuncs.com
-        REPOSITORY: tlhub
-        TOKEN: ${{ secrets.ALIYUN_TOKEN }}
-    - name: Copy images To Docker Hub
-      run: bash skopeo.sh
-      env: 
-        REGISTRY: docker.io
-        REPOSITORY: canvas1996
-        TOKEN: ${{ secrets.DOCKER_TOKEN }}
+        IMAGES_LIST_FILE: base/base-library.txt
