@@ -13,4 +13,4 @@ jobs:
     - name: Sync images
       run: bash skopeo.sh
       env: 
-        IMAGES_LIST_FILE: base/base-library.txt
+        IMAGES_LIST_FILE: base/base-library.yml
