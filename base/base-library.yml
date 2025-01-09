@@ -103,8 +103,6 @@ swr.cn-east-5.myhuaweicloud.com:
     tsiongchi/eclipse-temurin:
       - 8-jdk-jammy
       - 8-jre-jammy
-      - 8-alpine-jdk
-      - 8-alpine-jre
     tsiongchi/gcc:
       - 14
     # Data Science
