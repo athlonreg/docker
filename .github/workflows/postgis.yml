@@ -85,6 +85,6 @@ jobs:
         run: |
           rm -rf docker-postgis/Makefile
           grep -rl "LABEL" docker-postgis | xargs sed -i 's#org.opencontainers.image.source="https://github.com/postgis/docker-postgis"#org.opencontainers.image.source="https://github.com/athlonreg/docker"#g'
-          cp posgis.Makefile docker-postgis/Makefile
+          cp postgis.Makefile docker-postgis/Makefile
           cd docker-postgis
           make test
