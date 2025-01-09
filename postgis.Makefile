@@ -52,7 +52,7 @@ endif
 
 # The repository and image names default to the official but can be overriden
 # via environment variables.
-REPO_NAME  ?= canvas1996
+REPO_NAME  ?= quay.io/taolu
 IMAGE_NAME ?= postgis
 
 DOCKER=docker
@@ -76,21 +76,17 @@ update:
 define build-version
 build-$1:
 ifeq ($(do_default),true)
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t canvas1996/$(IMAGE_NAME):$(shell echo $1) $1
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t ghcr.io/athlonreg/$(IMAGE_NAME):$(shell echo $1) $1
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t quay.io/taolu/$(IMAGE_NAME):$(shell echo $1) $1
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t registry.cn-hangzhou.aliyuncs.com/tlhub/$(IMAGE_NAME):$(shell echo $1) $1
-#	skopeo copy --multi-arch all --override-os linux docker://quay.io/athlonreg/$(IMAGE_NAME):$(shell echo $1) docker://swr.cn-east-5.myhuaweicloud.com/tsiongchi/$(IMAGE_NAME):$(shell echo $1)
 
 	$(DOCKER) images          $(REPO_NAME)/$(IMAGE_NAME):$(shell echo $1)
 endif
 ifeq ($(do_alpine),true)
 ifneq ("$(wildcard $1/alpine)","")
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t canvas1996/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t ghcr.io/athlonreg/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t quay.io/taolu/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t registry.cn-hangzhou.aliyuncs.com/tlhub/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
-#	skopeo copy --multi-arch all --override-os linux docker://quay.io/athlonreg/$(IMAGE_NAME):$(shell echo $1)-alpine docker://swr.cn-east-5.myhuaweicloud.com/tsiongchi/$(IMAGE_NAME):$(shell echo $1)-alpine
 	$(DOCKER) images          $(REPO_NAME)/$(IMAGE_NAME):$(shell echo $1)-alpine
 endif
 endif
