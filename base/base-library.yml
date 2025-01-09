@@ -56,7 +56,7 @@ swr.cn-east-5.myhuaweicloud.com:
       - 17-alpine
       - 17-bookworm
     tsiongchi/mongo:
-      - 7
+      - 4.4
       - 7-jammy
     tsiongchi/mariadb:
       - 11
@@ -75,7 +75,6 @@ swr.cn-east-5.myhuaweicloud.com:
       - 5-bullseye
     # Languages & Frameworks
     tsiongchi/python:
-      - 3
       - 3-alpine
       - 3-slim
     tsiongchi/node:

@@ -10,6 +10,9 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -v4.1.2
     ks/kubesphere/kubectl:
       -v1.27.16
+      -v1.27.12
+      -v1.27.4
+      -v1.27.4
     ks/kubesphere/redis:
       -7.2.4-alpine
     ks/kubesphere/haproxy:
@@ -28,39 +31,26 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -4.10-2
     ks/kubesphere/builder-base:
       -v3.2.2
-    ks/kubesphere/builder-nodejs:
-      -v3.2.0
-    ks/kubesphere/builder-maven:
-      -v3.2.0
-    ks/kubesphere/builder-maven:
-      -v3.2.1-jdk11
-    ks/kubesphere/builder-python:
-      -v3.2.0
-    ks/kubesphere/builder-go:
-      -v3.2.0
-    ks/kubesphere/builder-go:
-      -v3.2.2-1.16
-    ks/kubesphere/builder-go:
-      -v3.2.2-1.17
-    ks/kubesphere/builder-go:
-      -v3.2.2-1.18
-    ks/kubesphere/builder-base:
       -v3.2.2-podman
     ks/kubesphere/builder-nodejs:
+      -v3.2.0
       -v3.2.0-podman
     ks/kubesphere/builder-maven:
+      -v3.2.0
       -v3.2.0-podman
-    ks/kubesphere/builder-maven:
+      -v3.2.1-jdk11
       -v3.2.1-jdk11-podman
     ks/kubesphere/builder-python:
+      -v3.2.0
       -v3.2.0-podman
     ks/kubesphere/builder-go:
+      -v3.2.0
       -v3.2.0-podman
-    ks/kubesphere/builder-go:
+      -v3.2.2-1.16
       -v3.2.2-1.16-podman
-    ks/kubesphere/builder-go:
+      -v3.2.2-1.17
       -v3.2.2-1.17-podman
-    ks/kubesphere/builder-go:
+      -v3.2.2-1.18
       -v3.2.2-1.18-podman
     ks/argoproj/argocd:
       -v2.3.3
@@ -72,8 +62,6 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -6.2.6-alpine
     ks/kubesphere/gatekeeper-extension-apiserver:
       -v1.0.1
-    ks/kubesphere/kubectl:
-      -v1.27.12
     ks/openpolicyagent/gatekeeper:
       -v3.14.0
     ks/openpolicyagent/gatekeeper-crds:
@@ -84,14 +72,10 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -v1.0.2
     ks/kubesphere/gateway-controller-manager:
       -v1.0.2
-    ks/kubesphere/kubectl:
-      -v1.27.16
     ks/curlimages/curl:
       -7.85.0
     ks/grafana/grafana:
       -10.4.1
-    ks/library/busybox:
-      -1.31.1
     ks/kubeedge/iptables-manager:
       -v1.13.1
     ks/kubeedge/cloudcore:
@@ -104,18 +88,12 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -v1.0.0
     ks/kubesphere/kubefed:
       -v0.8.1
-    ks/kubesphere/kubectl:
-      -v1.27.4
-    ks/kubesphere/kubectl:
-      -v1.27.12
     ks/grafana/loki:
       -3.0.0
     ks/grafana/loki-helm-test:
       -ewelch-distributed-helm-chart-17db5ee
     ks/grafana/loki-canary:
       -3.0.0
-    ks/nginxinc/nginx-unprivileged:
-      -1.24-alpine
     ks/library/memcached:
       -1.6.23-alpine
     ks/prom/memcached-exporter:
@@ -140,6 +118,7 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -2.8.0
     ks/library/busybox:
       -1.35.0
+      -1.31.1
     ks/kubesphere/opensearch-curator:
       -v0.0.5
     ks/opensearchproject/opensearch-dashboards:
@@ -150,8 +129,6 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -1.16.5
     ks/istio/istioctl:
       -1.16.5
-    ks/kubesphere/kubectl:
-      -v1.27.4
     ks/kubesphere/kiali-operator:
       -v1.59.1
     ks/kubesphere/kiali:
@@ -182,10 +159,6 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -v0.2.1
     ks/kubesphere/tower-extension:
       -v1.0.0
-    ks/timberio/vector:
-      -0.39.0-debian
-    ks/kubesphere/kubectl:
-      -v1.27.12
     ks/kubesphere/vector-config:
       -v0.2.1
     ks/kubesphere/whizard-alerting-apiserver:
@@ -194,8 +167,6 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -v1.0.2
     ks/thanosio/thanos:
       -v0.36.1
-    ks/kubesphere/kubectl:
-      -v1.27.12
     ks/kubesphere/cortex-tenant:
       -v1.12.5
     ks/prometheus-operator/prometheus-config-reloader:
@@ -204,30 +175,20 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -v0.8.0
     ks/jimmidyson/configmap-reload:
       -v0.9.0
-    ks/kubesphere/kubectl:
-      -v1.27.12
     ks/kubesphere/log-sidecar-injector:
       -v1.3.0
-    ks/jimmidyson/configmap-reload:
-      -v0.9.0
     ks/elastic/filebeat:
       -6.7.0
     ks/timberio/vector:
       -0.39.0-debian
     ks/library/alpine:
       -3.14
-    ks/kubesphere/kubectl:
-      -v1.27.12
     ks/kubesphere/kube-state-metrics:
       -v2.12.0
     ks/kubespheredev/kube-webhook-certgen:
       -v20221220-controller-v1.5.1-58-g787ea74b6
-    ks/thanosio/thanos:
-      -v0.36.1
     ks/brancz/kube-rbac-proxy:
       -v0.18.0
-    ks/prometheus-operator/prometheus-config-reloader:
-      -v0.75.1
     ks/prometheus-operator/prometheus-operator:
       -v0.75.1
     ks/prometheus/node-exporter:
@@ -240,12 +201,11 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -0.5.0
     ks/nginxinc/nginx-unprivileged:
       -1.24
+      -1.24-alpine
     ks/kubesphere/calico-exporter:
       -v0.3.0
     ks/kubesphere/whizard-monitoring-helm-init:
       -v0.1.0
-    ks/kubesphere/kubectl:
-      -v1.27.12
     ks/kubesphere/kube-rbac-proxy:
       -v0.11.0
     ks/kubesphere/alertmanager-proxy:
@@ -258,7 +218,5 @@ swr.cn-southwest-2.myhuaweicloud.com:
       -v4.0.2
     ks/prometheus/alertmanager:
       -v0.27.0
-    ks/prometheus-operator/prometheus-config-reloader:
-      -v0.75.1
     ks/kubesphere/whizard-telemetry-apiserver:
       -v1.2.2

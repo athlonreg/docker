@@ -17,6 +17,6 @@ jobs:
         HUAWEI_TOKEN: ${{ secrets.HUAWEI_TOKEN }}
         ALIYUN_TOKEN: ${{ secrets.ALIYUN_TOKEN }}
         QUAYIO_TOKEN: ${{ secrets.QUAYIO_TOKEN }}
-        DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+        #DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
         GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
         EARTH_TOKEN: ${{ secrets.EARTH_TOKEN }}
