@@ -86,10 +86,10 @@ ifeq ($(do_default),true)
 endif
 ifeq ($(do_alpine),true)
 ifneq ("$(wildcard $1/alpine)","")
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/386,linux/s390x,linux/ppc64le,linux/riscv64,linux/arm/v7,linux/arm/v6,linux/arm64/v8" --push --pull -t canvas1996/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/386,linux/s390x,linux/ppc64le,linux/riscv64,linux/arm/v7,linux/arm/v6,linux/arm64/v8" --push --pull -t ghcr.io/athlonreg/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/386,linux/s390x,linux/ppc64le,linux/riscv64,linux/arm/v7,linux/arm/v6,linux/arm64/v8" --push --pull -t quay.io/taolu/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/386,linux/s390x,linux/ppc64le,linux/riscv64,linux/arm/v7,linux/arm/v6,linux/arm64/v8" --push --pull -t registry.cn-hangzhou.aliyuncs.com/tlhub/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t canvas1996/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t ghcr.io/athlonreg/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t quay.io/taolu/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t registry.cn-hangzhou.aliyuncs.com/tlhub/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
 #	skopeo copy --multi-arch all --override-os linux docker://quay.io/athlonreg/$(IMAGE_NAME):$(shell echo $1)-alpine docker://swr.cn-east-5.myhuaweicloud.com/tsiongchi/$(IMAGE_NAME):$(shell echo $1)-alpine
 	$(DOCKER) images          $(REPO_NAME)/$(IMAGE_NAME):$(shell echo $1)-alpine
 endif
