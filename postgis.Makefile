@@ -76,11 +76,11 @@ update:
 define build-version
 build-$1:
 ifeq ($(do_default),true)
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/arm/v7" --push --pull -t canvas1996/$(IMAGE_NAME):$(shell echo $1) $1
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/arm/v7" --push --pull -t swr.cn-east-5.myhuaweicloud.com/tsiongchi/$(IMAGE_NAME):$(shell echo $1) $1
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/arm/v7" --push --pull -t ghcr.io/athlonreg/$(IMAGE_NAME):$(shell echo $1) $1
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/arm/v7" --push --pull -t quay.io/taolu/$(IMAGE_NAME):$(shell echo $1) $1
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64,linux/arm/v7" --push --pull -t registry.cn-hangzhou.aliyuncs.com/tlhub/$(IMAGE_NAME):$(shell echo $1) $1
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t canvas1996/$(IMAGE_NAME):$(shell echo $1) $1
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t swr.cn-east-5.myhuaweicloud.com/tsiongchi/$(IMAGE_NAME):$(shell echo $1) $1
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t ghcr.io/athlonreg/$(IMAGE_NAME):$(shell echo $1) $1
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t quay.io/taolu/$(IMAGE_NAME):$(shell echo $1) $1
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t registry.cn-hangzhou.aliyuncs.com/tlhub/$(IMAGE_NAME):$(shell echo $1) $1
 
 	$(DOCKER) images          $(REPO_NAME)/$(IMAGE_NAME):$(shell echo $1)
 endif
