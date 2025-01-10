@@ -57,7 +57,6 @@ swr.cn-east-5.myhuaweicloud.com:
       - 17-bookworm
     tsiongchi/mongo:
       - 4.4
-      - 7-jammy
     tsiongchi/mariadb:
       - 11
       - 11.2-jammy
