@@ -78,7 +78,7 @@ build-$1:
 ifeq ($(do_default),true)
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t ghcr.io/athlonreg/$(IMAGE_NAME):$(shell echo $1) $1
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t quay.io/taolu/$(IMAGE_NAME):$(shell echo $1) $1
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t registry.cn-hangzhou.aliyuncs.com/tlhub/$(IMAGE_NAME):$(shell echo $1) $1
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t registry.cn-hangzhou.aliyuncs.com/geovis-aiplatform/$(IMAGE_NAME):$(shell echo $1) $1
 
 	$(DOCKER) images          $(REPO_NAME)/$(IMAGE_NAME):$(shell echo $1)
 endif
@@ -86,7 +86,7 @@ ifeq ($(do_alpine),true)
 ifneq ("$(wildcard $1/alpine)","")
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t ghcr.io/athlonreg/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
 	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t quay.io/taolu/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
-	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t registry.cn-hangzhou.aliyuncs.com/tlhub/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
+	$(DOCKER) buildx build --platform="linux/arm64,linux/amd64" --push --pull -t registry.cn-hangzhou.aliyuncs.com/geovis-aiplatform/$(IMAGE_NAME):$(shell echo $1)-alpine $1/alpine
 	$(DOCKER) images          $(REPO_NAME)/$(IMAGE_NAME):$(shell echo $1)-alpine
 endif
 endif
