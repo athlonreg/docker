@@ -27,7 +27,7 @@ jobs:
 
     name: Build docker image for ${{ matrix.postgres }}-${{ matrix.postgis }} variant ${{ matrix.variant }}
     runs-on: ubuntu-24.04
-    continue-on-error: ${{ matrix.postgis == 'master' }} || ${{ matrix.postgis == '3.5' }}
+    continue-on-error: ${{ matrix.postgis == 'master' || matrix.postgis == '3.5' }}
     env:
       VERSION: ${{ matrix.postgres }}-${{ matrix.postgis }}
       VARIANT: ${{ matrix.variant }}
